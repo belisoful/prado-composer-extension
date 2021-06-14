@@ -1,0 +1,1 @@
+my_error_condition = Prado Composer Extension threw an exception
