@@ -22,7 +22,7 @@
 		}
 	},
 	"require": {
-		"pradosoft/prado" : "4.2.0"
+		"pradosoft/prado" : ">=4.2.0-alpha1"
 	},
 	"extra": {
 		"bootstrap": "PradoComposerExtension\\MainModule"
