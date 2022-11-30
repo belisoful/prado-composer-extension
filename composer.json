@@ -1,30 +1,30 @@
 {
-	"name": "pradosoft/prado-composer-extension",
-	"version": "v1.0.0.1",
-	"version_normalized": "1.0.0.1",
-	"description": "The Base example PRADO Composer Extension",
+	"name": "belisoful/prado-composer-extension",
+	"version": "v1.0.0",
+	"version_normalized": "1.0.0",
+	"description": "The *First* Personalized Base example PRADO Composer Extension.  Use this as a template.",
 	"license": "BSD-3-Clause",
 	"type": "prado4-extension",
-	"keywords": [ "prado", "framework", "example", "extension"],
+	"keywords": [ "prado", "framework", "example", "template", "extension"],
 	"homepage": "https://github.com/pradosoft/prado-composer-extension",
 	"authors": [
 		{
 			"name": "Brad Anderson",
 			"email": "belisoful@icloud.com",
-			"role": "Developer",
+			"role": "Software Architect",
 			"homepage": "https://github.com/belisoful"
 		}
 	],
 	"notification-url": "https://packagist.org/downloads/",
 	"autoload": {
 		"psr-4": {
-			"PradoComposerExtension\\": "src"
+			"belisoful\\PradoComposerExtension\\": "src"
 		}
 	},
 	"require": {
-		"pradosoft/prado" : ">=4.2.0-alpha1"
+		"pradosoft/prado" : ">=4.2.0"
 	},
 	"extra": {
-		"bootstrap": "PradoComposerExtension\\MainModule"
+		"bootstrap": "belisoful\\PradoComposerExtension\\MainModule"
 	}
 }

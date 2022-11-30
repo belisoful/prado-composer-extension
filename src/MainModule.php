@@ -5,10 +5,10 @@
  * @author Brad Anderson <belisoful@icloud.com>
  * @link https://github.com/pradosoft/prado-composer-extension
  * @license https://github.com/pradosoft/prado-composer-extension/blob/master/LICENSE
- * @package PradoComposerExtension
  */
-namespace PradoComposerExtension;
+namespace belisoful\PradoComposerExtension;
 
+use Prado\Exceptions\TConfigurationException;
 use Prado\TPropertyValue;
 use Prado\Util\TPluginModule;
 
@@ -18,7 +18,6 @@ use Prado\Util\TPluginModule;
  * main example bootstrap module class
  *
  * @author Brad Anderson <belisoful@icloud.com>
- * @package PradoComposerExtension
  * @since 1.0.0
  */
 class MainModule extends TPluginModule
@@ -49,5 +48,13 @@ class MainModule extends TPluginModule
 	public function setPropertyA($v)
 	{
 		$this->_propertya = TPropertyValue::ensureString($v);
+	}
+	
+	/**
+	 * an example that throws an error message defined in the extensions errorMessages.txt
+	 */
+	public function throwCustomException()
+	{
+		throw new TConfigurationException('my_error_condition');
 	}
 }
