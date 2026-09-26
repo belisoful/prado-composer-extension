@@ -82,8 +82,9 @@ Set the PluginContentId to the name of the main TContentPlaceHolder ID of your l
 Follow the panel link to http://application/web/index.php?page=Example
 On the index page you'll see extension specific content.
 
-`TPageService` only serves additional page paths located within the application base path
-(the `Application` path alias); otherwise it throws a 403 `THttpException`.
+`TPageService` serves additional page paths located within the application base path
+(the `Application` path alias).  The standard PRADO application layout installs Composer's
+`vendor/` directory inside `protected/`, so extension pages are within that path.
 
 
 Extension

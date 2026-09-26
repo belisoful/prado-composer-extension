@@ -105,7 +105,7 @@
 - The bootstrap module extends `Prado\Util\TPluginModule` (or `Prado\Util\TDbPluginModule` for database extensions).
 - An application configures the extension by using the composer package name (containing "/") as the module id, without a `class` attribute.
 - Extension pages live in `src/Pages/` and use `<com:TContent ID=<%$ PluginContentId %>>` so applications can place them in their own layout.
-- `TPageService` only serves additional page paths located within the application base path (the `Application` path alias).
+- `TPageService` serves additional page paths within the application base path (the `Application` path alias); the standard PRADO application layout installs `vendor/` inside `protected/`.
 - Extension error messages live in `src/errorMessages.txt` and are registered by `TPluginModule::init()`.
 
 ## Testing Guidelines

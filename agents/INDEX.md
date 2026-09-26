@@ -27,5 +27,6 @@ that class as a module when an application uses the package name as a module id.
 - `Prado\Util\TPluginModule::init()` attaches `attachPageServiceBehavior` to `TApplication::onBeginRequest`
   and registers `errorMessages.txt` with `TException::addMessageFile()`.
 - `TPageService::createPage()` raises `onAdditionalPagePaths` when a page is not in the application
-  `BasePath`; each returned path must be within the `Application` path alias or a 403 is thrown.
+  `BasePath`; each returned path must be within the `Application` path alias (the standard PRADO layout
+  installs `vendor/` inside `protected/`, so extension pages qualify).
 - The `PluginContentId` application parameter is the `TContent` ID used by extension pages.

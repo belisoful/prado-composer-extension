@@ -40,7 +40,7 @@ prado-composer-extension/
 - Contains an example page template `Example.page`
 - The page includes a TContent control with ID parameter `PluginContentId`
 - This demonstrates how plugin content can be integrated into layouts
-- `TPageService::createPage()` only serves additional page paths within the `Application` path alias
+- `TPageService::createPage()` serves additional page paths within the `Application` path alias; the standard PRADO layout installs `vendor/` inside `protected/`
 
 ## Configuration
 - `composer.json` defines:
