@@ -1,1 +1,8 @@
+# Error messages for the PRADO Composer Extension.
+#
+# Each line is "error_code = message"; the message may use {0}, {1}, ... as
+# positional placeholders for the exception parameters.  Lines starting with
+# '#' or ';' are comments (supported since PRADO 4.3.3).  A language specific
+# file, eg. "errorMessages-de.txt", is loaded instead when it matches the
+# application's preferred language.
 my_error_condition = Prado Composer Extension threw an exception

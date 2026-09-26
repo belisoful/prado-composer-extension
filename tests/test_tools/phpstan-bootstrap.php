@@ -1,9 +1,10 @@
 <?php
+
 /**
- * A few common settings for all unit tests.
+ * PHPStan bootstrap for the PRADO Composer Extension.
  *
- * Also remember do define the @package attribute for your test class to make it appear under
- * the right package in unit test and code coverage reports.
+ * The Composer autoloader has been loaded so PHPStan can resolve the PRADO framework
+ * classes and the PRADO PHPStan extensions listed in phpstan.neon.dist.
  */
 
 require_once(__DIR__ . '/../../vendor/autoload.php');

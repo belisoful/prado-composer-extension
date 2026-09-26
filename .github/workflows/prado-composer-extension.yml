@@ -42,7 +42,12 @@ jobs:
         run: composer validate --strict
 
       - name: Validate code syntax using php-cs-fixer
-        run: php-cs-fixer fix -vvv --dry-run --using-cache=no --format=checkstyle | cs2pr
+        run: |
+          php-cs-fixer check -vvv --using-cache=no || true
+          echo " "
+          echo "---------------------- Generating Annotations ----------------------"
+          echo "Run php-cs-fixer check --using-cache=no --format=checkstyle | cs2pr"
+          php-cs-fixer check --using-cache=no --format=checkstyle | cs2pr
 
       - name: Get composer cache directory
         id: composer-cache
@@ -68,14 +73,11 @@ jobs:
 
       - name: Setup postgres service
         run: |
-          createdb -h 127.0.0.1 -U postgres prado_unitest
-          psql -h 127.0.0.1 -U postgres -a -w prado_unitest -f ./tests/initdb_pgsql.sql
+          createdb -h 127.0.0.1 -U postgres prado_compex_unitest
+          psql -h 127.0.0.1 -U postgres -a -w prado_compex_unitest -f ./tests/initdb_pgsql.sql
         env:
           PGPASSWORD: postgres
 
       - name: Run Unit Tests
         run: |
           composer unittest
-
-
-

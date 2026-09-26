@@ -1,12 +1,8 @@
 <?php
 
-declare(strict_types=1);
-
-use PhpCsFixer\Config;
-use PhpCsFixer\Finder;
-
 $finder = PhpCsFixer\Finder::create()
-	->exclude('.git/')
+	->exclude('agents/')
+	->exclude('build/')
 	->exclude('docs/')
 	->exclude('tests/')
 	->exclude('vendor/')
@@ -15,8 +11,8 @@ $finder = PhpCsFixer\Finder::create()
 $config = new PhpCsFixer\Config();
 $config
 	->setRiskyAllowed(true)
-    ->setIndent("\t")
-    ->setLineEnding("\n")
+	->setIndent("\t")
+	->setLineEnding("\n")
 	->setRules([
 		'@PSR12' => true,
 		'@PHP8x2Migration' => true,
